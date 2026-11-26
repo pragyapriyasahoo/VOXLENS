@@ -1,0 +1,33 @@
+{
+  "nodes": [
+    {"id": "entrance", "name": "Main Entrance", "x": 0, "y": 0, "node_type": "entrance", "floor": 0},
+    {"id": "lobby", "name": "Lobby", "x": 5, "y": 0, "node_type": "hallway", "floor": 0},
+    {"id": "hallway_n", "name": "North Hallway", "x": 5, "y": 10, "node_type": "hallway", "floor": 0},
+    {"id": "hallway_s", "name": "South Hallway", "x": 5, "y": -10, "node_type": "hallway", "floor": 0},
+    {"id": "room_101", "name": "Room 101", "x": 15, "y": 10, "node_type": "room", "floor": 0},
+    {"id": "room_102", "name": "Room 102", "x": 15, "y": 5, "node_type": "room", "floor": 0},
+    {"id": "room_103", "name": "Room 103", "x": 15, "y": 0, "node_type": "room", "floor": 0},
+    {"id": "room_104", "name": "Room 104", "x": 15, "y": -5, "node_type": "room", "floor": 0},
+    {"id": "room_105", "name": "Room 105", "x": 15, "y": -10, "node_type": "room", "floor": 0},
+    {"id": "restroom", "name": "Restroom", "x": 10, "y": -10, "node_type": "room", "floor": 0},
+    {"id": "stairs", "name": "Stairs to Floor 2", "x": 0, "y": 10, "node_type": "stairs", "floor": 0},
+    {"id": "exit", "name": "Emergency Exit", "x": 0, "y": -10, "node_type": "exit", "floor": 0}
+  ],
+  "edges": [
+    {"from": "entrance", "to": "lobby", "length_m": 5.0, "walkable": true, "edge_type": "corridor"},
+    {"from": "lobby", "to": "hallway_n", "length_m": 10.0, "walkable": true, "edge_type": "corridor"},
+    {"from": "lobby", "to": "hallway_s", "length_m": 10.0, "walkable": true, "edge_type": "corridor"},
+    {"from": "lobby", "to": "room_103", "length_m": 10.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_n", "to": "room_101", "length_m": 10.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_n", "to": "room_102", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_n", "to": "stairs", "length_m": 5.0, "walkable": true, "edge_type": "corridor"},
+    {"from": "hallway_s", "to": "room_104", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_s", "to": "room_105", "length_m": 10.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_s", "to": "restroom", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "hallway_s", "to": "exit", "length_m": 10.0, "walkable": true, "edge_type": "corridor"},
+    {"from": "room_101", "to": "room_102", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "room_102", "to": "room_103", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "room_103", "to": "room_104", "length_m": 5.0, "walkable": true, "edge_type": "door"},
+    {"from": "room_104", "to": "room_105", "length_m": 5.0, "walkable": true, "edge_type": "door"}
+  ]
+}

@@ -1,0 +1,105 @@
+# VoxLens Configuration
+# All modules read from this single config file
+
+# === General ===
+version: "1.0"
+language: "en"  # ISO 639-1 code; placeholder for future i18n
+
+# === Paths ===
+models_dir: "./models"
+map_file: "./data/sample_map.json"
+transcript_file: "./data/sample_transcript.json"
+log_dir: "./logs"
+
+# === NLP Clarification ===
+nlp:
+  lookback_window: 3                    # Previous segments for context
+  latency_target_ms: 300                # Target per-segment latency
+  t5_model: "t5-small"                  # HuggingFace model ID (auto-downloads)
+  use_t5: true                          # Set false for rule-only mode
+  filler_words:                         # Words to remove
+    - "um"
+    - "uh"
+    - "er"
+    - "ah"
+    - "like"
+    - "you know"
+    - "i mean"
+    - "sort of"
+    - "kind of"
+  allowlisted_proper_nouns:             # Never modify these
+    - "VoxLens"
+    - "ESP8266"
+    - "SSD1306"
+    - "Python"
+    - "Raspberry"
+    - "Jetson"
+    - "Ollama"
+    - "llama.cpp"
+    - "Gemma"
+    - "T5"
+    - "Dijkstra"
+    - "A*"
+  asr_corrections:                      # Common ASR error mappings
+    "vox lens": "VoxLens"
+    "voxlens": "VoxLens"
+    "esp 8266": "ESP8266"
+    "ssd 1306": "SSD1306"
+    "raspberry pie": "Raspberry Pi"
+    "jet son": "Jetson"
+
+# === Summarization ===
+summarization:
+  window_minutes: 15                    # Rolling window of conversation
+  interval_seconds: 300                 # Auto-summary interval (5 min)
+  max_summary_chars: 200                # Summary text limit
+  max_key_points: 5                     # Maximum key points
+  max_key_point_chars: 60               # Per key point limit
+  chunk_tokens: 2000                    # Approx tokens per chunk
+  llm:
+    model: "gemma2:2b-instruct-q4_k_m"  # Ollama model name
+    # Alternative: local GGUF path for llama.cpp
+    # model_path: "./models/gemma-2-2b-it-q4_k_m.gguf"
+    backend: "ollama"                   # "ollama" or "llamacpp"
+    host: "http://localhost:11434"      # Ollama API endpoint
+    timeout_seconds: 60                 # Request timeout
+    temperature: 0.1                    # Low for consistent JSON
+    max_retries: 1                      # Retry once on invalid JSON
+  latency_target_seconds: 20            # Target for 10-min conversation
+
+# === Path Shower ===
+path_shower:
+  recalculation_threshold_m: 5.0        # Recalculate if off-route by this much
+  turn_angle_thresholds:                # Degrees; negative = left
+    left: [-135, -45]
+    right: [45, 135]
+    u_turn: [-180, -135]                # Also [135, 180]
+  distance_rounding: 1                  # Round distance_m to nearest metre
+  max_next_label_chars: 20              # Truncate node name
+  latency_target_ms: 1000               # Target cue generation latency
+
+# === Speaker Palette ===
+# Colours for speaker labels on OLED (hex, no #)
+speaker_palette:
+  - "FF6B6B"  # Red
+  - "4ECDC4"  # Teal
+  - "FFE66D"  # Yellow
+  - "95E1D3"  # Mint
+  - "FFA07A"  # Light salmon
+  - "DDA0DD"  # Plum
+  - "98D8C8"  # Seafoam
+  - "F7DC6F"  # Gold
+
+# === Display ===
+display:
+  width: 128
+  height: 64
+  chars_per_line: 20
+  lines: 4
+
+# === Logging ===
+logging:
+  level: "INFO"
+  format: "json"                        # "json" or "text"
+  file_rotation: "daily"
+  max_files: 7

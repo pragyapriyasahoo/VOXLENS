@@ -1,0 +1,121 @@
+{
+  "segments": [
+    {
+      "text": "um hello everyone welcome to the vox lens demo",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.92,
+      "start_ms": 0,
+      "end_ms": 3500
+    },
+    {
+      "text": "today we will discuss the esp 8266 display and the ssd 1306 oled",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.88,
+      "start_ms": 4000,
+      "end_ms": 8000
+    },
+    {
+      "text": "uh the raspberry pie five has sixteen gigabytes of ram",
+      "speaker_id": "S2",
+      "speaker_name": "Student 1",
+      "colour": "4ECDC4",
+      "confidence": 0.91,
+      "start_ms": 8500,
+      "end_ms": 11500
+    },
+    {
+      "text": "that is correct and the jet son orin nano is another option",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.85,
+      "start_ms": 12000,
+      "end_ms": 15500
+    },
+    {
+      "text": "um what about the ollama model for summarization",
+      "speaker_id": "S3",
+      "speaker_name": "Student 2",
+      "colour": "FFE66D",
+      "confidence": 0.90,
+      "start_ms": 16000,
+      "end_ms": 19000
+    },
+    {
+      "text": "we use gemma two two b instruct quantized to four bit",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.87,
+      "start_ms": 19500,
+      "end_ms": 23000
+    },
+    {
+      "text": "the dijkstra algorithm handles the navigation routing",
+      "speaker_id": "S2",
+      "speaker_name": "Student 1",
+      "colour": "4ECDC4",
+      "confidence": 0.93,
+      "start_ms": 23500,
+      "end_ms": 26500
+    },
+    {
+      "text": "and a star can be used for larger maps with heuristics",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.89,
+      "start_ms": 27000,
+      "end_ms": 30000
+    },
+    {
+      "text": "uh the exam is on friday january fifteenth at two pm",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.94,
+      "start_ms": 30500,
+      "end_ms": 34000
+    },
+    {
+      "text": "remember to bring your voxlens glasses to class",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.96,
+      "start_ms": 34500,
+      "end_ms": 37500
+    },
+    {
+      "text": "um any questions about the path shower module",
+      "speaker_id": "S3",
+      "speaker_name": "Student 2",
+      "colour": "FFE66D",
+      "confidence": 0.88,
+      "start_ms": 38000,
+      "end_ms": 41000
+    },
+    {
+      "text": "the turn detection uses heading change angles left right u turn straight",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.91,
+      "start_ms": 41500,
+      "end_ms": 45000
+    },
+    {
+      "text": "okay thank you everyone that concludes the demo",
+      "speaker_id": "S1",
+      "speaker_name": "Teacher",
+      "colour": "FF6B6B",
+      "confidence": 0.95,
+      "start_ms": 45500,
+      "end_ms": 48500
+    }
+  ]
+}

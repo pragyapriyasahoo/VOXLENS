@@ -1,0 +1,30 @@
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# IDE
+.vscode/
+
+# Logs
+logs/
+*.log
+
+# Environment secrets
+.env
+
+# Model files
+*.gguf
+*.pt
+*.pth
+*.bin
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,36 @@
+# VoxLens Intelligence Modules - Requirements
+# Python 3.11+
+
+# Core
+pyyaml>=6.0.1
+jsonschema>=4.23.0
+pydantic>=2.8.0
+pydantic-settings>=2.3.0
+
+# NLP Clarification
+transformers>=4.41.0
+torch>=2.3.0 --index-url https://download.pytorch.org/whl/cpu
+sentencepiece>=0.2.0
+protobuf>=4.25.0
+
+# Summarization
+ollama>=0.3.0
+# llama-cpp-python>=0.2.90  # Uncomment if using llama.cpp directly
+
+# Path Shower
+networkx>=3.3
+numpy>=1.26.0
+
+# Utilities
+rich>=13.7.0
+loguru>=0.7.2
+
+# Testing
+pytest>=8.2.0
+pytest-asyncio>=0.23.0
+pytest-cov>=5.0.0
+hypothesis>=6.100.0
+
+# Type checking (optional)
+# mypy>=1.10.0
+# types-requests>=2.31.0
